@@ -1,0 +1,9 @@
+/*Responsiveness macro-aree layout*/
+@media screen and (max-width: 520px){
+    aside{
+        width: 50px;
+    }
+    .main-container .cta{
+        left: 50px;
+    }
+}
