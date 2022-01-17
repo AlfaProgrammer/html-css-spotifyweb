@@ -1,9 +1,7 @@
 /*DEBUG RULES*/
 .debug-main{
     width: 100%;
-    padding-block: 20px;
-    border: 4px solid #0ef0dd;
-    margin-block: 10px;
+    border: 4px solid #0ef0dd;   
 
 }
 .debug-aside{
@@ -15,17 +13,14 @@ aside{
     /* border: 4px solid orange; */
 }
 .main-container{
-    border: 4px solid violet
+    /* border: 4px solid violet */
 }
-.categories, .cover-wrapper{
+.cover-wrapper{
     width: 100%;
     padding-block: 40px;
     border: 4px solid #FFF500;
-    margin-block: 10px;
-
 }
 /*END DEBUG RULES*/
-
 *{
     margin: 0;
     padding:0;
@@ -34,7 +29,9 @@ aside{
 html{
     overflow-y: hidden;
     font-family: 'Dongle', sans-serif;
-    
+
+    --active:hsl(0, 0%, 60%);  
+    --hover: white;  
 }
 img{
     width: 100%;
@@ -53,10 +50,17 @@ ul{
     list-style: none;
 }
 .active{
-    color: hsl(0, 0%, 60%);
+    color: var(--active);
 }
 h1, h2, h3{
     color: white;
+}
+
+main{
+    flex-grow: 1;
+    background-color: #141922;
+    /* border: 4px solid red; */
+    display: flex;
 }
 
 /*////////////////////ASIDE RULES////////////////////*/
@@ -78,7 +82,7 @@ aside{
     display: none;
 }
 aside li:hover{
-    color: hsl(0, 0%, 100%);
+    color: var(--hover);
 }
 aside .user{
     margin-top:auto; /*Per il flex*/
@@ -144,12 +148,69 @@ li .icon{
 
 /*//////////////////END ASIDE RULES/////////////////*/
 
-main{
+/*//////////////////MAIN CONTAINER RULES///////////*/
+
+
+.main-container{
     flex-grow: 1;
-    background-color: #141922;
-    /* border: 4px solid red; */
-    display: flex;
+    max-height: calc(100% - 60px);
 }
+.main-container .cta{
+    background-color:rgba(8, 11, 18, 0.8);
+    padding: 20px 20px;
+    position:fixed; 
+    right:0;
+    top:0;
+    left:200px; /*Aside width*/
+}
+.cta button{
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 999px;
+    background-color: transparent;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+.clearfix::after{
+    content:"";
+    display: block;
+    clear:both
+}
+.cover-container{
+    position:sticky;
+    top: 79.2px;
+    left:0;
+    right:0; 
+    bottom: 0;
+}
+.categories{
+    padding-block: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase; 
+    font-size: 25px;   
+}
+.categories ul{
+    display: contents;
+}
+.categories ul li{
+    color: var(--hover);
+}
+.categories ul li a{
+    text-decoration: none; 
+    color: var(--active);
+    padding: 0 7px;
+}
+.categories ul li a:hover{
+    color: currentColor;
+}
+
+/*////////////////END MAIN CONTAINER RULES///////////*/
+
 footer{
     padding-block: 30px;
     background-color: hsl(0, 0%, 16%);
@@ -161,16 +222,3 @@ footer{
     right:0;
     bottom: 0;
 }
-
-.main-container{
-    flex-grow: 1;
-    max-height: calc(100% - 60px);
-}
-.main-container .cta{
-    background-color:#080B12;
-    position:fixed; 
-    right:0;
-    top:0;
-    left:200px; /*Aside width*/
-}
-
