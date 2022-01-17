@@ -2,6 +2,8 @@
 @media screen and (max-width: 520px){
     aside{
         width: 50px;
+        padding: 20px unset 20px;
+        align-items: center;
     }
     .main-container .cta{
         left: 50px;
@@ -11,17 +13,21 @@
     aside .logo .big{
         display: none;
     }
+    aside div.logo{
+        width: 30px;
+    }
     .logo .small{
         display: unset;
     }
     li .icon{
         margin-right: unset;
     }
-    aside > *{
-        padding-left: unset;
-        padding-bottom: unset;
+    .user .install span, .user__name, .user hr{
+        display: none;
     }
-    aside{
-        align-items: center;
+    .user .install .icon{
+        width: 100%;
+        margin-bottom: 5px;
     }
+    
 }
