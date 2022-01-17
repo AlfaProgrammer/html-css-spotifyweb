@@ -8,12 +8,11 @@
 }
 .debug-aside{
     width: 100%;
-    padding-block: 20px;
     border: 4px solid #03f803;
-    margin-block: 10px;
+    
 }
 aside{
-    border: 4px solid orange;
+    /* border: 4px solid orange; */
 }
 .main-container{
     border: 4px solid violet
@@ -29,10 +28,13 @@ aside{
 
 *{
     margin: 0;
+    padding:0;
     box-sizing: border-box;
 }
 html{
     overflow-y: hidden;
+    font-family: 'Dongle', sans-serif;
+    
 }
 img{
     width: 100%;
@@ -44,23 +46,70 @@ img{
 body{
     display: flex;
     height: 100vh;
-    flex-direction: column;    
+    flex-direction: column;   
+    color:hsl(0, 0%, 25%); 
+}
+ul{
+    list-style: none;
+}
+.active{
+    color: hsl(0, 0%, 60%);
 }
 
-/*ASIDE RULES*/
+/*////////////////////ASIDE RULES////////////////////*/
 aside{
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
     width: 200px;
     max-height: calc(100% - 60px);
     flex-shrink: 0;
     display: flex;
-    flex-direction: column;
-        
+    flex-direction: column;    
+    font-size: 20px;    
+}
+.logo{
+    width: 75%;
+}
+.logo .small{
+    display: none;
+}
+aside li:hover{
+    color: hsl(0, 0%, 100%);
 }
 aside .user{
     margin-top:auto;
-}    
-/*END ASIDE RULES*/
+}   
+aside > *{
+    padding-left: 10px;
+    padding-block: 10px;
+} 
+aside li{
+    line-height:30px;   
+}
+li .icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 30px;
+    text-align: center;
+}
+.icon i{
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.playlist .icon i, .playlist li:first-of-type{
+    line-height: 40px; 
+}
+.playlist .icon{
+    font-size: 40px;
+    width: 40px;
+}
+.playlist__title{
+    color: white;
+}
+
+/*//////////////////END ASIDE RULES/////////////////*/
 
 main{
     flex-grow: 1;

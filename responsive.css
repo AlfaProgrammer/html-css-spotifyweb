@@ -6,4 +6,22 @@
     .main-container .cta{
         left: 50px;
     }
+    aside .playlist,
+    aside .menu span,
+    aside .logo .big{
+        display: none;
+    }
+    .logo .small{
+        display: unset;
+    }
+    li .icon{
+        margin-right: unset;
+    }
+    aside > *{
+        padding-left: unset;
+        padding-bottom: unset;
+    }
+    aside{
+        align-items: center;
+    }
 }
