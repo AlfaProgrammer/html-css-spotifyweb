@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 html{
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: 'Dongle', sans-serif;
 
     --active:hsl(0, 0%, 60%);  
@@ -96,9 +96,6 @@ aside{
 }
 .logo .small{
     display: none;
-}
-aside li:hover{
-    color: var(--hover);
 }
 aside .user{
     margin-top:auto; /*Per il flex*/
@@ -199,6 +196,7 @@ li .icon{
     height: calc(100% - 79.2px);
     padding-bottom: 20px;
 }
+
 .categories{
     display: flex;
     justify-content: center;
@@ -217,9 +215,7 @@ li .icon{
     color: var(--active);
     padding: 0 7px;
 }
-.categories ul li a:hover{
-    color: currentColor;
-}
+
 /*Cover Wrapper*/
 .cover-wrapper{
     padding-left:10px;
@@ -251,12 +247,21 @@ li .icon{
     font-size: 20px;
     margin-top: -10px;
 }
-.cover__image img.artist{
+.cover__image.artist{
     border-radius: 50%;
+    overflow: hidden;
+}
+.cover__image.artist img{
     width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center;    
 }
+.cover__image{
+    position: relative; /*Per poter mettere il hover*/
+}
+
 /*////////////////END MAIN CONTAINER RULES///////////*/
 
 /*////////////////FOOTER CURRENT-SONG RULES///////////*/
@@ -285,6 +290,9 @@ footer{
     align-items: center;
     flex-shrink: 1;
     column-gap: 5px;
+}
+.song-playing i{
+    margin-left: 10px;
 }
 .song-playing .cover{
     display: contents;
@@ -329,7 +337,7 @@ footer{
     margin: 0 10px;
     width: 70%;
     position: relative; 
-    overflow: hidden;
+    
 }
 .progress-track{
     background-color: white;
@@ -339,6 +347,18 @@ footer{
     bottom: 0; 
     left:0; 
     width: 20%;
+}
+.progress-disc{
+    height: 10px;
+    width: 10px;
+    background-color: var(--active);
+    box-shadow: 0 0 5px black;
+    border-radius: 50%;
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translate(50%, -50%);
+    visibility: hidden;
 }
 
 /*Settings*/

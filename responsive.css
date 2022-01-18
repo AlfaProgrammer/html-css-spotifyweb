@@ -21,7 +21,9 @@
         height: 30px;    
     }
     .song-playing i {
-        display: block;
+        display: block;    
+        margin-left: unset;
+        
     }
     
 }
