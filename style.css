@@ -284,9 +284,6 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
-.settings{
-    border: 1px solid red;
-}
 
 /*song playing*/
 
@@ -357,7 +354,19 @@ footer{
 /*Settings*/
 
 .settings{
-    padding-right:200px
+    height: 40px;
+    max-width: 300px;
+    flex-grow: 1;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    color: white;
+}
+.settings .progress{
+    width: 100%;
+}
+.settings i{
+    margin-right:10px;
 }
 
 /*////////////////FOOTER CURRENT-SONG END///////////*/
