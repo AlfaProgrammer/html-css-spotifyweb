@@ -1,5 +1,32 @@
-/*Responsiveness macro-aree layout*/
-@media screen and (max-width: 520px){
+/*MAIN 4 COLL*/
+@media screen and (max-width: 870px){
+    .cover-list{
+        flex-wrap: wrap;
+    }
+    .cover{
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cover{
+        width: 48%;
+    }
+    .categories{
+        flex-wrap: wrap-reverse;
+        justify-content: flex-start;
+    }
+    .song-playing .cover__image{
+        width: 30px;
+        height: 30px;    
+    }
+    .song-playing i {
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 550px){
     aside{
         flex-basis: 50px;
         padding: 20px 0 20px;
@@ -28,6 +55,17 @@
     .user .install .icon{
         width: 100%;
         margin-bottom: 5px;
+    }
+    /*FOOTER RULES*/
+    
+    .player__commands i{
+        margin: 0 5px; 
+    }
+    .media-player, footer .current-song{
+        font-size: 12px;
+    }
+    .song-playing:last-child{
+        padding-right: 0;
     }
     
 }
