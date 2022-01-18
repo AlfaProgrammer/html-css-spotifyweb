@@ -1,8 +1,8 @@
 /*Responsiveness macro-aree layout*/
 @media screen and (max-width: 520px){
     aside{
-        width: 50px;
-        padding: 20px unset 20px;
+        flex-basis: 50px;
+        padding: 20px 0 20px;
         align-items: center;
     }
     .main-container .cta{
