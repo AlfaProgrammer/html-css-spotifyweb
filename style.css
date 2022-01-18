@@ -81,7 +81,7 @@ h1, h2, h3{
 
 main{
     /* flex-grow: 1; */
-    height:calc(100vh - 60px);
+    height:calc(100vh - 80px);
     background-color: #141922;
     /* border: 4px solid red; */
     display: flex;
@@ -178,7 +178,7 @@ li .icon{
 
 .main-container{
     flex-grow: 1;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
 }
 .main-container .cta{
     background-color:rgba(8, 11, 18, 0.8);
@@ -268,14 +268,96 @@ li .icon{
 }
 /*////////////////END MAIN CONTAINER RULES///////////*/
 
+/*////////////////FOOTER CURRENT-SONG RULES///////////*/
+
 footer{
-    padding-block: 30px;
+    height: 80px;
+    padding: 5px;
     background-color: hsl(0, 0%, 16%);
-    border: 4px solid salmon;
     flex-shrink: 0;    
     position: fixed;
     z-index: 999;
     left:0; 
     right:0;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.settings{
+    border: 1px solid red;
+}
+
+/*song playing*/
+
+.song-playing{
+    max-width: 200px;  
+    display: flex;
+    align-items: center;
+}
+.song-playing .cover{
+    display: contents;
+}
+.song-playing .cover__image{
+    width: 80px;
+}
+.song-playing .cover__image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+.song-playing *{
+    padding-right: 7px;
+}
+/*Media Player*/
+
+.media-player{
+    flex-grow: 1;
+    max-width: 50%;
+    color: white;
+}
+.player__commands{
+    margin: 10px auto 0;
+    font-size: 20px;
+    line-height: 20px;
+    max-width: fit-content;
+}
+.player__commands i{
+    margin: 0 10px;
+}
+.player{
+    line-height: 40px;
+}
+.player .progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress__bar{
+    background-color: var(--active);
+    height: 4px;
+    border-radius: 999px;
+    margin: 0 10px;
+    width: 70%;
+    position: relative; 
+    overflow: hidden;
+}
+.progress-track{
+    background-color: white;
+    position: absolute; 
+    border-radius: 999px;
+    top:0; 
+    bottom: 0; 
+    left:0; 
+    width: 20%;
+}
+
+/*Settings*/
+
+.settings{
+    padding-right:200px
+}
+
+/*////////////////FOOTER CURRENT-SONG END///////////*/
