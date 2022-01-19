@@ -97,9 +97,14 @@ aside{
 .logo .small{
     display: none;
 }
-aside .user{
-    margin-top:auto; /*Per il flex*/
-}   
+aside .playlist{
+    display: contents;
+}
+aside .playlist__item{
+    flex-grow: 1;
+    overflow: auto;
+    scrollbar-width: thin;
+}
 li .icon{
     display: inline-block;
     vertical-align: middle;
@@ -169,13 +174,14 @@ li .icon{
     height: calc(100vh - 80px);
 }
 .main-container .cta{
-    background-color:rgba(8, 11, 18, 0.8);
+    background-color:rgba(8, 11, 18, 0.9);
     padding: 20px 20px;
     text-align: right;
     position:fixed; 
     right:0;
     top:0;
     left:200px; /*Aside width*/
+    z-index: 10;
 }
 .cta button{
     color: white;
@@ -188,11 +194,7 @@ li .icon{
     font-weight: bold;
 }
 .cover-container{
-    position:sticky;
-    top: 79.2px;
-    left:0;
-    right:0; 
-    bottom: 0;
+    padding-top: 80px;
     height: calc(100% - 79.2px);
     padding-bottom: 20px;
 }
@@ -384,7 +386,7 @@ footer{
 }
 .settings i{
     font-size: 12px;
-}
+}    
 
 
 /*////////////////FOOTER CURRENT-SONG END///////////*/
