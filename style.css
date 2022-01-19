@@ -100,6 +100,18 @@ aside{
 aside .playlist{
     display: contents;
 }
+.playlist button{
+    height: 50px;
+    background-color: transparent;
+    text-align: start;
+    font-weight: bolder;
+    vertical-align: middle;
+    border-style: none;
+}
+.playlist button i{
+    font-size: 40px;
+    vertical-align: middle;
+}
 aside .playlist__item{
     flex-grow: 1;
     overflow: auto;
@@ -195,7 +207,7 @@ li .icon{
 }
 .cover-container{
     padding-top: 80px;
-    height: calc(100% - 79.2px);
+    height: 100%;
     padding-bottom: 20px;
 }
 
@@ -239,6 +251,9 @@ li .icon{
 }
 .cover{
     width: 14%;
+}
+.cover__image img{
+    display: block;
 }
 .cover__title{
     font-size: 20px;

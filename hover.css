@@ -31,9 +31,11 @@ aside li:hover{
     top:50%; 
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 40px;
     visibility: hidden;
     cursor: pointer;
+}
+.hover-play i{
+    font-size: 40px;
 }
 .cover:hover .cover__image::after, 
 .cover:hover .hover-play{
@@ -41,7 +43,8 @@ aside li:hover{
 }
 
 /*FOOTER*/
-.song-playing i:hover{
+.song-playing i:hover,
+.playlist button:hover{
     color: white;
     cursor: pointer;
 }
