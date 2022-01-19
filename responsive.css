@@ -60,8 +60,8 @@
     }
     /*FOOTER RULES*/
     
-    .player__commands i{
-        margin: 0 5px; 
+    .player__commands{
+        gap: 10px;
     }
     .media-player, footer .current-song{
         font-size: 12px;

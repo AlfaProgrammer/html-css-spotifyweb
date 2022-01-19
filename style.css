@@ -298,8 +298,8 @@ footer{
     display: contents;
 }
 .song-playing .cover__image{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 
 }
 .song-playing .cover__image img{
@@ -313,18 +313,23 @@ footer{
 /*Media Player*/
 
 .media-player{
-    flex-grow: 1;
-    max-width: 50%;
-    min-width: 200px;
+    flex-basis: 40%;
+    /* max-width: 50%;
+    min-width: 200px; */
     color: white;
+    /*Correzioni*/
+    /* display: flex; */
 }
 .player__commands{
-    margin: 10px auto 0;
-    max-width: fit-content;
+    /* margin: 10px auto 0; */
+    /* max-width: fit-content; */
+    /*Correzioni*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
 }
-.player__commands i{
-    margin: 0 10px;
-}
+
 .player .progress{
     display: flex;
     justify-content: center;
@@ -335,8 +340,10 @@ footer{
     height: 4px;
     border-radius: 999px;
     margin: 0 10px;
-    width: 70%;
     position: relative; 
+    /*Correzione*/
+    flex-grow: 1;
+    flex-shrink: 1;
     
 }
 .progress-track{
@@ -346,7 +353,7 @@ footer{
     top:0; 
     bottom: 0; 
     left:0; 
-    width: 20%;
+    width: 40%;
 }
 .progress-disc{
     height: 10px;
@@ -364,22 +371,19 @@ footer{
 /*Settings*/
 
 .settings{
-    height: 40px;
+    
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     color: white;
     gap: 0 5px;
+    
 }
 .settings .progress__bar{
-    width: 60px;
+    width: 50px;
     margin: 0;
 }
 .settings i{
     font-size: 12px;
-}
-.settings .progress{
-    flex-shrink: 1;
 }
 
 
